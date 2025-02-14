@@ -1,0 +1,10 @@
+[project]
+name = "GigDelivery"
+description = "An app to help track deliveries on gig delivery platforms."
+authors = [{ name = "Paul Schockner", email = "anthropaulogy@gmail.com" }]
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
