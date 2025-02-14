@@ -2,8 +2,10 @@
 
 
 class InvalidIDError(Exception):
-    """A exception for an invalid ID"""
-
-    def __init__(self, message: str) -> None:
+    def __init__(self, message: str = "Invalid ID") -> None:
         super().__init__(message)
-        self.message = message
+
+
+class InvalidLocationName(Exception):
+    def __init__(self, message: str = "Invalid location name") -> None:
+        super().__init__(message)
