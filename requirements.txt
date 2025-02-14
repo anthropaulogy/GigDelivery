@@ -3,6 +3,7 @@ certifi==2025.1.31
 charset-normalizer==3.4.1
 click==8.1.8
 colorama==0.4.6
+coverage==7.6.12
 docutils==0.21.2
 filetype==1.2.0
 Flask==3.1.0
@@ -23,10 +24,13 @@ pluggy==1.5.0
 Pygments==2.19.1
 pypiwin32==223
 pytest==8.3.4
+pytest-cov==6.0.0
 python-dateutil==2.9.0.post0
 pytz==2025.1
 pywin32==308
 requests==2.32.3
+setuptools==75.8.0
+setuptools-scm==8.1.0
 six==1.17.0
 tzdata==2025.1
 urllib3==2.3.0
