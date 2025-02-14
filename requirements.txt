@@ -7,6 +7,7 @@ docutils==0.21.2
 filetype==1.2.0
 Flask==3.1.0
 idna==3.10
+iniconfig==2.0.0
 itsdangerous==2.2.0
 Jinja2==3.1.5
 Kivy==2.3.1
@@ -16,9 +17,12 @@ kivy_deps.glew==0.3.1
 kivy_deps.sdl2==0.8.0
 MarkupSafe==3.0.2
 numpy==2.2.3
+packaging==24.2
 pandas==2.2.3
+pluggy==1.5.0
 Pygments==2.19.1
 pypiwin32==223
+pytest==8.3.4
 python-dateutil==2.9.0.post0
 pytz==2025.1
 pywin32==308
