@@ -6,6 +6,6 @@ class InvalidIDError(Exception):
         super().__init__(message)
 
 
-class InvalidLocationName(Exception):
+class InvalidLocationNameError(Exception):
     def __init__(self, message: str = "Invalid location name") -> None:
         super().__init__(message)
