@@ -30,3 +30,8 @@ Thumbs.db
 
 # Environment variables & secrets (if any)
 .env
+
+# Ignore Python coverage files
+.coverage
+coverage.*
+htmlcov/
