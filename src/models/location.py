@@ -1,7 +1,6 @@
 import datetime
 import uuid
-from src.helpers import utils, validation
-from src.helpers import exceptions
+from helpers import utils, validation, exceptions
 
 
 class Location:
@@ -34,6 +33,10 @@ class Location:
         """Adds a delivery ID to Location when delivery is made and increases the count."""
         if not isinstance(delivery_id, uuid.UUID):
             raise exceptions.InvalidIDError()
+
+        if delivery_id in self.deliveries_at_location:
+            raise exceptions.IDExistsError()
+
         self.__deliveries_at_location.append(delivery_id)
         self.increase_delivery_count()
 
@@ -54,6 +57,10 @@ class Location:
         """Removes a delivery from a location, ie cancelled"""
         if not isinstance(delivery_id, uuid.UUID):
             raise exceptions.InvalidIDError()
+
+        if delivery_id not in self.deliveries_at_location:
+            raise exceptions.IDNotFoundError()
+
         self.__deliveries_at_location.remove(delivery_id)
         self.decrease_delivery_count()
 
@@ -105,6 +112,8 @@ class Location:
 
     @location_type.setter
     def location_type(self, new_location_type: str) -> None:
+        if not validation.is_valid_location_type(new_location_type):
+            raise exceptions.InvalidLocationTypeError()
         self.__location_type = new_location_type
 
     # [ DUNDERS ] -------------------------------------------------------------
